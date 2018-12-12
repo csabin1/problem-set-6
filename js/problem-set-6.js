@@ -11,7 +11,13 @@
  */
 
 function sayHello() {
-
+  function sayHello() {
+    const canvas=document.getElementById('canvas1');
+    const ctx=canvas.getContext('2d')
+    ctx.clearRect(0, 0, 50, 10);
+    ctx.font= '48px sans-serif';
+    ctx.strokeText('Hello, World!', 10, 50);
+  }
 }
 
 /*
@@ -38,7 +44,28 @@ function sayHello() {
  */
 
 function drawRectangle() {
-
+  function drawRectangle() {
+    const canvas=document.getElementById('canvas2');
+    const ctx=canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.height, canvas.width);
+    let height;
+    let width;
+    let x;
+    let y;
+    while(true){
+       height=prompt("Height: ")
+       width=prompt("Width: ")
+       x=prompt("X: ")
+       y=prompt("Y: ")
+       if(x<5 || y<5 || width<1 || height<1 || canvas.width-x-width<0 || canvas.height-y-height<0) {
+         continue;
+       }
+       else {
+         break;
+       }
+    }
+    ctx.strokeRect(x, y, width, height);
+  }
 }
 
 /*
@@ -67,6 +94,15 @@ function drawRectangle() {
  */
 
 function drawColoredRectangle() {
+  const ctx = document.getElementById('canvas3').getContext('2d');
+  ctx.clearRect(0, 0, canvas3.width, canvas3.height);
+  let rectColor = prompt("Color: ");
+  if (rectColor === "black" || rectColor === "blue" || rectColor === "green" || rectColor === "orange" || rectColor === "purple" || rectColor === "red" || rectColor === "yellow") {
+ctx.fillStyle = rectColor;
+    ctx.fillRect(10, 10, 100, 50);
+  } else {
+    alert(rectColor + "is not an unsupported color.")
+  }
 
 }
 
@@ -100,7 +136,7 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
-
+  
 }
 
 /*
