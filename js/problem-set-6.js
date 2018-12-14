@@ -136,7 +136,21 @@ ctx.fillStyle = rectColor;
  */
 
 function drawTriangle() {
-  
+  const ctx = document.getElementById('canvas4').getContext('2d');
+  ctx.clearRect(0, 0, canvas4.width, canvas4.height);
+  let startx = 10
+  let starty = 10
+  let side1 = Number(prompt("Side 1:"));
+  let side2 = Number(prompt("Side 2:"));
+  let side3 = Number(prompt("Side 3:"));
+  if ((side1 * side1) + (side2 * side2) === (side3 * side3)) && 
+
+  context.beginPath();
+    context.moveTo(75,75);
+    context.lineTo(10,75);
+    context.lineTo(10,25);
+    context.fill();
+
 }
 
 /*
